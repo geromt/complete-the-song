@@ -580,6 +580,11 @@ video {
   background-color: rgb(63 74 89 / var(--tw-bg-opacity));
 }
 
+.bg-green-sheen {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 181 176 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
@@ -615,6 +620,16 @@ video {
   line-height: 1;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -627,6 +642,16 @@ video {
 .text-sea-green {
   --tw-text-opacity: 1;
   color: rgb(163 227 198 / var(--tw-text-opacity));
+}
+
+.text-green-sheen {
+  --tw-text-opacity: 1;
+  color: rgb(100 181 176 / var(--tw-text-opacity));
+}
+
+.text-tea-green {
+  --tw-text-opacity: 1;
+  color: rgb(219 247 203 / var(--tw-text-opacity));
 }
 
 .shadow-md {

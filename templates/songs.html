@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../static/output.css" rel="stylesheet">
+  <link href="static/output.css" rel="stylesheet">
 </head>
 <body class="h-screen bg-gradient-to-t from-space to-green-sheen">
   <div class="justify-center">
@@ -14,7 +14,7 @@
       </div>
       <div id="song-list" class="self-center mt-20 m-10 p-10 items-center">
           {% for song in songs: %}
-          <div onclick="location.href='{{song.route}}'" class="transition shadow-md m-3 shadow-sea-green bg-green-sheen p-3 rounded hover:bg-sea-green hover:shadow hover:scale-110">
+          <div onclick="location.href='/song/{{song.id_song}}'" class="transition shadow-md m-3 shadow-sea-green bg-green-sheen p-3 rounded hover:bg-sea-green hover:shadow hover:scale-110">
               <p class="text-space text-lg">{{song.title}}</p>
               <p class="text-space text-xs">{{song.author}}</p>
           </div>

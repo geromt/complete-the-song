@@ -13,13 +13,14 @@
           </h1>
       </div>
       <div id="lyrics" class="self-center mt-20 m-10 p-10 items-center">
-          <form action="eval-song" method="post" class="text-tea-green">
-              {{song.gen_incomplete()}}
+          <form action="../eval-song" method="post" class="text-green-sheen">
+              {{song.gen_incomplete()|safe}}
+              <input hidden id="correct-words" type="text" name="correct-words" value="{{song.get_correct_words()}}">
               <button type="submit">Eval</button>
           </form>
       </div>
       <div id="video">
-          {{song.video_url}}
+          {{song.url|safe}}
       </div>
   </div>
 </body>

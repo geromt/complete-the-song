@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="static/output.css" rel="stylesheet">
+</head>
+<body class="h-screen bg-gradient-to-t from-space to-green-sheen">
+  <div class="justify-center">
+      <div id="title" class="self-center mt-10 p-10">
+          <h1 class="animate-pulse text-space  font-sans text-5xl font-bold text-center">
+              Eval
+          </h1>
+      </div>
+      <div id="song-list" class="self-center mt-20 m-10 p-10 items-center">
+          <p class="text-space text-lg">
+              Of {{total}} questions you had {{wrong}} answers wrong
+          </p>
+          <div class="transition shadow-md m-3 shadow-sea-green bg-green-sheen p-3 rounded hover:bg-sea-green hover:shadow hover:scale-110">
+              <p class="text-space text-lg">correct - incorrect</p>
+          </div>
+          {% for ans in wrong_answers: %}
+          <div class="transition shadow-md m-3 shadow-sea-green bg-green-sheen p-3 rounded hover:bg-sea-green hover:shadow hover:scale-110">
+              <p class="text-space text-lg">{{ans[0]}} - {{ans[1]}}</p>
+          </div>
+          {% endfor %}
+      </div>
+      <a href="/index">home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../static/output.css" rel="stylesheet">
+</head>
+<body class="h-screen bg-gradient-to-t from-space to-green-sheen">
+  <div class="justify-center">
+      <div id="title" class="self-center mt-10 p-10">
+          <h1 class="animate-pulse text-space  font-sans text-5xl font-bold text-center">
+              Add New Song
+          </h1>
+      </div>
+      <div id="form" class="self-center mt-20 m-10 p-10 items-center">
+          <form id="adding-song-form" action="adding-song" method="post">
+              <label for="title">Title: </label>
+              <input id="title" type="text" name="title" required/><br/>
+
+              <label for="author" class="mt-20">Author: </label>
+              <input id="author" type="text" name="author" required class="mt-20"/><br/>
+
+              <label for="url">URL: </label>
+              <input id="url" type="text" name="url" required class="mt-20"/><br/>
+
+              <label for="lyrics">Lyrics: </label>
+              <textarea id="lyrics" name="lyrics" cols="50" rows="80" form="adding-song-form" required class="mt-20">Write the lyrics here</textarea><br/>
+
+              <input id="submit-button" type="submit" name="submit-button" class="mt-20">
+          </form>
+      </div>
+  </div>
+</body>
+</html>

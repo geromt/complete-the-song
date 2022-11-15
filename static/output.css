@@ -537,6 +537,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -575,14 +579,14 @@ video {
   border-radius: 0.25rem;
 }
 
-.bg-space {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 74 89 / var(--tw-bg-opacity));
-}
-
 .bg-green-sheen {
   --tw-bg-opacity: 1;
   background-color: rgb(100 181 176 / var(--tw-bg-opacity));
+}
+
+.bg-space {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 74 89 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-t {

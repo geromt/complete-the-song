@@ -1,6 +1,7 @@
-Mejoras
 bd_textos
 datos/
 Canciones/
 .idea
 node_modules
+input.css
+songs.db

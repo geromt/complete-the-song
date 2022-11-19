@@ -1,18 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["templates/*.html"],
+  content: ["application/templates/*.html"],
   theme: {
     extend: {
+        colors: {
+            'rich-black': '#030F11',
+            'midnight-green': '#1D4049',
+            'pacific-blue': '#50A4B9',
+            'dark-sky-blue': '#8AC2D0',
+            'blizzard': '#B8E9F4',
+            'apple-green': '#8FD694',
+            'yellow-red': '#F9C04E',
+            'ruby-red': '#DB2763',
+        },
         animation: {
-        'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;',
-      }
+        'pulse': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;',
+        }
     },
-    colors: {
-        'space': '#3F4A59',
-        'tea-green': '#DBF7CB',
-        'sea-green': '#A3E3C6',
-        'green-sheen': '#64B5B0',
-    }
   },
   plugins: [],
 }

@@ -3,30 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="static/style.css" rel="stylesheet">
+  <link href="../static/black-style.css" rel="stylesheet">
 </head>
-<body class="h-screen bg-gradient-to-t from-space to-green-sheen">
-  <div class="justify-center">
-      <div id="title" class="self-center mt-10 p-10">
-          <h1 class="animate-pulse text-space  font-sans text-5xl font-bold text-center">
+<body class="bg-rich-black text-pacific-blue">
+  <div>
+      <div id="page-title" class="mt-10 p-10">
+          <h1 class="animate-pulse font-sans text-5xl font-bold text-center">
               Add New Song
           </h1>
       </div>
-      <div id="form" class="self-center mt-20 m-10 p-10 items-center">
-          <form id="adding-song-form" action="adding-song" method="post">
-              <label for="title">Title: </label>
-              <input id="title" type="text" name="title" required/><br/>
+      <div id="form" class="mt-10 m-10 p-10">
+          <form id="adding-song-form" action="adding-song" method="post" class="flex flex-col gap-10">
+              <div class="flex flex-row bg-midnight-green border-4 border-pacific-blue p-8 rounded-lg">
+                <label for="title" class="font-bold w-1/4 text-center text-lg">
+                    Title:
+                </label>
+                <input id="title" type="text" name="title" class="rounded w-3/4 p-1 text-rich-black" placeholder="Title" required/><br/>
+              </div>
 
-              <label for="author" class="mt-20">Author: </label>
-              <input id="author" type="text" name="author" required class="mt-20"/><br/>
+              <div class="flex flex-row bg-midnight-green border-4 border-pacific-blue p-8 rounded-lg">
+                <label for="author" class="font-bold w-1/4 text-center text-lg">Author: </label>
+                <input id="author" type="text" name="author" class="rounded w-3/4 p-1 text-rich-black" placeholder="Author" required class="mt-20"/><br/>
+              </div>
 
-              <label for="url">URL: </label>
-              <input id="url" type="text" name="url" required class="mt-20"/><br/>
+              <div class="flex flex-row bg-midnight-green border-4 border-pacific-blue p-8 rounded-lg">
+                <label for="url" class="font-bold w-1/4 text-center text-lg">URL: </label>
+                <input id="url" type="text" name="url" class="rounded w-3/4 p-1 text-rich-black" placeholder="URL" required class="mt-20"/><br/>
+              </div>
 
-              <label for="lyrics">Lyrics: </label>
-              <textarea id="lyrics" name="lyrics" cols="50" rows="80" form="adding-song-form" required class="mt-20">Write the lyrics here</textarea><br/>
+              <div class="flex flex-row bg-midnight-green border-4 border-pacific-blue p-8 rounded-lg">
+                <label for="lyrics" class="font-bold w-1/4 text-center text-lg">Lyrics: </label>
+                <textarea id="lyrics" name="lyrics" cols="50" rows="20" class="text-rich-black rounded w-3/4 p-1" form="adding-song-form" required class="mt-20" placeholder="Write the lyrics here"></textarea><br/>
+              </div>
 
-              <input id="submit-button" type="submit" name="submit-button" class="mt-20">
+              <input id="submit-button" type="submit" value="Add song" name="submit-button" class="flex justify-center self-center w-1/2 mt-10 transition shadow-lg m-10 shadow-blizzard bg-midnight-green p-3 pl-10 pr-10 text-blizzard rounded hover:bg-blizzard hover:text-rich-black hover:shadow hover:scale-110">
           </form>
       </div>
   </div>

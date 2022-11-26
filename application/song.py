@@ -24,7 +24,7 @@ class Song:
             self.last_words.append(words[n])
 
             incomplete.append(" ".join(words[:n]))
-            incomplete.append(f' <input id="{i}" type="text" name="{i}"> ')
+            incomplete.append(f' <input class="rounded w-1/4 p-1 text-rich-black" id="{i}" type="text" name="{i}"> ')
             incomplete.append(" ".join(words[(n+1):]))
             incomplete.append(f' <br/>')
             i += 1

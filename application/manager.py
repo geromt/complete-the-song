@@ -22,6 +22,12 @@ def incomplete_song(id_song):
     return render_template("song.html", song=song)
 
 
+@app.route("/video/<id_song>")
+def video_popup(id_song):
+    song = get_song_by_id(id_song)
+    return render_template("video.html", video_url=song.url)
+
+
 @app.route("/add-song")
 def add_song():
     return render_template("add-song.html")

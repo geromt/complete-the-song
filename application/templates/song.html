@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../static/black-style.css" rel="stylesheet">
 </head>
-<body class="bg-rich-black text-pacific-blue">
+<body class="bg-rich-black text-pacific-blue" onload="window.open('../video/{{song.id_song}}','','height=200,width=400,scrollbars=no')">
   <div>
       <div id="title" class="mt-10 p-10">
           <h1 class="animate-pulse font-sans text-5xl font-bold text-center">
@@ -20,9 +20,6 @@
                   Evaluate
               </button>
           </form>
-      </div>
-      <div id="video" class="bg-pacific-blue m-10 rounded-lg">
-          {{song.url|safe}}
       </div>
   </div>
 </body>

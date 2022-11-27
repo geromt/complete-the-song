@@ -517,16 +517,12 @@ video {
   margin: 2.5rem;
 }
 
-.m-3 {
-  margin: 0.75rem;
-}
-
-.m-5 {
-  margin: 1.25rem;
-}
-
 .m-2 {
   margin: 0.5rem;
+}
+
+.m-3 {
+  margin: 0.75rem;
 }
 
 .mt-10 {
@@ -547,10 +543,6 @@ video {
 
 .hidden {
   display: none;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .w-1\/4 {
@@ -645,10 +637,6 @@ video {
 .bg-pacific-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(80 164 185 / var(--tw-bg-opacity));
-}
-
-.bg-gradient-to-t {
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
 .p-10 {
@@ -764,11 +752,6 @@ video {
 .hover\:bg-blizzard:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(184 233 244 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-midnight-green:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 64 73 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-pacific-blue:hover {

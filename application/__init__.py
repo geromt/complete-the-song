@@ -1,8 +1,14 @@
 from flask import Flask, render_template
+from flaskwebgui import FlaskUI
 from application.db_controller import create_db
 
 
 app = Flask(__name__)
+ui = FlaskUI(app=app,
+             server="flask",
+             port=5000,
+             fullscreen=True,
+             browser_path="chromium")
 
 # Create de database if not exists
 create_db()

@@ -8,7 +8,8 @@ At this point, it's only intended to run on a local machine.
 ## Requirements
 
 - Python 3
-- pip
+- Chromium
+- pip (it typically comes with python3)
 - Sqlite3 (it typically comes with python3)
 ---
 ## Getting started
@@ -33,7 +34,6 @@ or
 ./runserver.py
 ```
 
-### Open the browser in `http://localhost:5000`
 
 
 

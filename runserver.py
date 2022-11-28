@@ -1,4 +1,4 @@
-from application import app
+from application import ui
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    ui.run()

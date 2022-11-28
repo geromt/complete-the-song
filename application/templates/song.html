@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../static/black-style.css" rel="stylesheet">
 </head>
-<body class="bg-rich-black text-pacific-blue" onload="window.open('../video/{{song.id_song}}','','height=200,width=400,scrollbars=no')">
+<body class="bg-rich-black text-pacific-blue" onload="window.open('../video/{{song.id_song}}','','height=487,width=1366,scrollbars=no')">
   <div>
       <div id="title" class="mt-10 p-10">
           <h1 class="animate-pulse font-sans text-5xl font-bold text-center">
               {{song.title}}
           </h1>
       </div>
+      <div id="video-button" class="flex justify-center m-10">
+          <button class="w-1/4 mt-10 transition shadow-lg m-10 shadow-blizzard bg-midnight-green p-3 pl-10 pr-10
+                         text-blizzard rounded hover:bg-blizzard hover:text-rich-black hover:shadow hover:scale-110"
+                  onclick="window.open('../video/{{song.id_song}}','','height=487,width=1366,scrollbars=no')">
+              Open Video
+          </button>
+      </div>
       <div id="lyrics" class="flex justify-center mt-20 m-10 p-10 text-center">
           <form action="../eval-song" method="post">
               {{song.gen_incomplete()|safe}}
               <input hidden id="correct-words" type="text" name="correct-words" value="{{song.get_correct_words()}}">
-              <button type="submit" class="w-1/2 mt-10 transition shadow-lg m-10 shadow-blizzard bg-midnight-green p-3 pl-10 pr-10 text-blizzard rounded hover:bg-blizzard hover:text-rich-black hover:shadow hover:scale-110">
+              <button type="submit" class="w-1/2 mt-10 transition shadow-lg m-10 shadow-blizzard bg-midnight-green p-3
+                                           pl-10 pr-10 text-blizzard rounded hover:bg-blizzard hover:text-rich-black
+                                           hover:shadow hover:scale-110">
                   Evaluate
               </button>
           </form>

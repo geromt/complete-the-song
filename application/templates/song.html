@@ -25,9 +25,10 @@
           </button>
       </div>
       <div id="lyrics" class="flex justify-center mt-20 m-10 p-10 text-center">
-          <form action="../eval-song" method="post">
+          <form name="song-form" action="../eval-song" onsubmit="return validateSong()" method="post">
               {{song.gen_incomplete()|safe}}
               <input hidden id="correct-words" type="text" name="correct-words" value="{{song.get_correct_words()}}">
+              <input hidden id="tries" type="text" name="tries" value="0">
               <button type="submit" class="w-1/2 mt-10 transition shadow-lg m-10 shadow-blizzard bg-midnight-green p-3
                                            pl-10 pr-10 text-blizzard rounded hover:bg-blizzard hover:text-rich-black
                                            hover:shadow hover:scale-110">
@@ -42,6 +43,39 @@
       videoDiv.style.display = "none";
 
       window.open('../video/{{song.id_song}}','','height=480,width=853,scrollbars=no');
+    }
+
+    const incorrect = new Map();
+
+    function validateSong() {
+        const correctArray = document.forms["song-form"]["correct-words"].value.split(" ");
+        let tries = Number(document.forms["song-form"]["tries"].value);
+        document.forms["song-form"]["tries"].value = String(tries+1);
+        let flag = false;
+        for (let i=0; i < correctArray.length; i++){
+            let input = document.forms["song-form"][i.toString()]
+            console.log(input.value.trim().toLowerCase().replace(/\W/g, ""));
+            console.log(correctArray[i].trim().toLowerCase().replace(/\W/g, ""));
+            if (input.value.trim().toLowerCase().replace(/\W/g, "") != correctArray[i].trim().toLowerCase().replace(/\W/g, "")){
+                if (incorrect.has(i)){
+                    input.style.border = "2px solid yellow";
+                    input.style.backgroundColor = "#F9C04E";
+                    input.value = correctArray[i].slice(0, incorrect.get(i));
+                    incorrect.set(i, incorrect.get(i)+1);
+                } else {
+                    input.style.border = "2px solid #DB2763";
+                    input.style.backgroundColor = "red";
+                    incorrect.set(i, 1);
+                }
+                flag = true;
+            } else {
+                input.style.border = "2px solid green";
+                input.style.backgroundColor = "#8FD694";
+            }
+        }
+        if (flag){
+            return false;
+        }
     }
 
     const frameVideo = document.getElementsByTagName("iframe")[0];

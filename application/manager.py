@@ -55,4 +55,5 @@ def eval_song():
         return render_template("eval.html",
                                total=len(correct_words),
                                wrong=wrong,
-                               wrong_answers=wrong_answers)
+                               wrong_answers=wrong_answers,
+                               tries=request.form["tries"])

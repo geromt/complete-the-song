@@ -9,30 +9,13 @@
   <div>
       <div id="title" class="mt-10 p-10">
           <h1 class="animate-pulse font-sans text-5xl font-bold text-center">
-              Evaluation
+              Congratulations!!!
           </h1>
       </div>
-      <div id="song-list" class="self-center mt-20 m-10 p-10 items-center">
-          <p class="text-space text-lg">
-              Of {{total}} questions you had {{wrong}} answers wrong
+      <div id="song-list" class="mt-20 m-10 p-10">
+          <p class="text-space text-lg text-center">
+              You complete the song. It takes you only {{tries}} tries.
           </p>
-          <div class="grid grid-cols-2 gap-5 border-2 border-pacific-blue m-10">
-              <div class="bg-pacific-blue m-2 text-rich-black rounded-lg text-center text-lg font-bold p-10">
-                  Correct
-              </div>
-              <div class="bg-pacific-blue m-2 text-rich-black rounded-lg text-center text-lg font-bold p-10">
-                  Incorrect
-              </div>
-
-              {% for ans in wrong_answers: %}
-              <div class="bg-pacific-blue m-2 text-rich-black rounded-lg text-center text-lg font-bold p-10">
-                {{ans[0]}}
-              </div>
-              <div class="bg-pacific-blue m-2 text-rich-black rounded-lg text-center text-lg font-bold p-10">
-                {{ans[1]}}
-              </div>
-              {% endfor %}
-          </div>
       </div>
       <div class="flex justify-center">
         <a href="/index" class="flex justify-center w-1/2 mt-10 transition shadow-lg m-10 shadow-blizzard bg-midnight-green p-3 pl-10 pr-10 text-blizzard rounded hover:bg-blizzard hover:text-rich-black hover:shadow hover:scale-110">home</a>

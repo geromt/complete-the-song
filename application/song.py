@@ -1,5 +1,4 @@
 import random
-import re
 
 
 class Song:
@@ -33,8 +32,4 @@ class Song:
         return "".join(incomplete)
 
     def get_correct_words(self):
-        # correct_words = self.last_words.copy()
-        # correct_words = [w.strip().lower() for w in correct_words]
-        # correct_words = [re.sub(r"\W", "", w) for w in correct_words]
-        # return " ".join(correct_words)
         return " ".join(self.last_words)

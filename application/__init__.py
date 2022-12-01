@@ -4,6 +4,8 @@ from application.db_controller import create_db
 
 
 app = Flask(__name__)
+
+# Open the app in chromium
 ui = FlaskUI(app=app,
              server="flask",
              port=5000,
@@ -22,7 +24,7 @@ def not_found(error):
 
 @app.errorhandler(500)
 def server_error(error):
-    title = "500 Server Error"
+    title = "500 Internal Server Error"
     return render_template('500.html', title=title), 500
 
 
